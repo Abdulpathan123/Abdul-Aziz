@@ -3,16 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>For Nimra</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(rgba(255, 105, 180, 0.7), rgba(255, 182, 193, 0.7)), url('https://images.unsplash.com/photo-1506748686214e9df14f3e2d54b6b3b43bb2d1f2a67b') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            color: #f0f0f0;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #f0f0f0;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(255, 228, 225, 0.9);
+            padding: 60px 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            max-width: 600px;
+            width: 90%;
+            margin: 100px auto 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent);
+            opacity: 0.5;
+            z-index: 0;
+        }
+
+        .container:hover {
+            transform: scale(1.05);
+            background-color: rgba(255, 182, 193, 0.95);
+        }
+
+        .message {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5em;
+            color: #ff69b4;
+            margin: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            position: relative;
+            z-index: 1;
+        }
+
+        .description, .poem {
+            font-size: 1.2em;
+            color: #333;
+            margin: 20px 0;
+            display: none;
+            position: relative;
+            z-index: 1;
+        }
+
+        .reveal-btn {
+            background-color: #ff69b4;
+            color: #ffffff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .reveal-btn:hover {
+            background-color: #ff1493;
+            transform: scale(1.1);
+        }
+
+        .heart {
+            color: #ff69b4;
+            font-size: 2.5em;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+    </style>
 </head>
 <body>
-<<<<<<< Updated upstream
-    <h1>Abdul Aziz Pathan</h1>
-    <h>Nimra</h>
-    <p> My name is abdul aziz</p>
-=======
-    <h1>New login page</h1>
-    <h2>Nimra</h2>
->>>>>>> Stashed changes
+    <header>
+        <!-- Header is now empty as requested -->
+    </header>
+
+    <section class="container">
+        <h1 class="message">Surprise, Nimra! <span class="heart">❤️</span></h1>
+        <p class="description">You're the love of my life, and I cherish every moment we spend together. You make my world a brighter place, and I love you more than words can say.</p>
+        <button class="reveal-btn" onclick="revealMessage()">Click to Reveal</button>
+        <div class="hidden-content">
+            <p class="poem">"I love you without knowing how, or when, or from where.<br>
+            I love you simply, without problems or pride:<br>
+            I love you in this way because I do not know any other way of loving but this,<br>
+            in which there is no I or you,<br>
+            so intimate that your hand upon my chest is my hand,<br>
+            so intimate that when I fall asleep your eyes close."</p>
+        </div>
+    </section>
+
+    <script>
+        function revealMessage() {
+            const message = document.querySelector('.message');
+            const description = document.querySelector('.description');
+            const hiddenContent = document.querySelector('.hidden-content');
+            const revealBtn = document.querySelector('.reveal-btn');
+            
+            message.style.opacity = 1;
+            description.style.display = 'block';
+            hiddenContent.style.display = 'block';
+            revealBtn.style.display = 'none'; // Hide the button
+        }
+    </script>
 </body>
 </html>
